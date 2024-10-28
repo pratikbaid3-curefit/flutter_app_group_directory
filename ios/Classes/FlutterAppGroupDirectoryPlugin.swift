@@ -17,8 +17,10 @@ public class FlutterAppGroupDirectoryPlugin: NSObject, FlutterPlugin {
       }
       
       if let appGroupId = args["appGroupId"] as? String {
-        let appGroup = getAppGroupDirectory(appGroupId: appGroupId);
-        result(appGroup)
+        DispatchQueue.main.async {
+          let appGroup = getAppGroupDirectory(appGroupId: appGroupId);
+          result(appGroup)
+        }
       } else {
         result(FlutterError(code: "WRONG_ARGS", message: "appGroupId seems to be missing", details: nil))
       }
