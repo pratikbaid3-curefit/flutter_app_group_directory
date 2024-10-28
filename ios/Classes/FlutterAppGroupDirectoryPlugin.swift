@@ -18,7 +18,7 @@ public class FlutterAppGroupDirectoryPlugin: NSObject, FlutterPlugin {
       
       if let appGroupId = args["appGroupId"] as? String {
         DispatchQueue.main.async {
-          let appGroup = getAppGroupDirectory(appGroupId: appGroupId);
+          let appGroup = self.getAppGroupDirectory(appGroupId: appGroupId);
           result(appGroup)
         }
       } else {
