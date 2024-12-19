@@ -1,6 +1,6 @@
 name: flutter_app_group_directory
 description: "Access to shared application group container on iOS & macOS."
-version: 1.0.2+2
+version: 1.1.0
 homepage: "https://dimitridessus.fr/"
 
 environment:
